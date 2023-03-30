@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <label>Title:</label>
+    <input type="text" name="title"><br>
+    <label>Content:</label>
+    <textarea name="content"></textarea><br>
+    <label>Author:</label>
+    <input type="text" name="author"><br>
+    <label>Publication Date:</label>
+    <input type="datetime-local" name="publication_date"><br>
+    <input type="submit" value="Create Blog Post">
+</form>
+
+
+{% endblock body %}
